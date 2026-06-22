@@ -5,15 +5,12 @@ const passportConfig = require("./lib/passportConfig");
 const cors = require("cors");
 const fs = require("fs");
 
-// MongoDB
+// MongoDB Atlas
 mongoose
-  .connect("mongodb://localhost:27017/jobPortal", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
-  .then((res) => console.log("Connected to DB"))
+  .connect(
+    "mongodb+srv://ayushmishra0919_db_user:<db_password>@cluster0.frgdf4r.mongodb.net/?appName=Cluster0"
+  )
+  .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.log(err));
 
 // initialising directories
