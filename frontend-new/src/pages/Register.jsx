@@ -10,7 +10,7 @@ function Register() {
   const handleRegister = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:4444/auth/signup",
+        "https://nexhire-z5c2.onrender.com/auth/signup",
         {
           name,
           email,

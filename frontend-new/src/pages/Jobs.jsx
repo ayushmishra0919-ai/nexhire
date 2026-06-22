@@ -6,7 +6,7 @@ function Jobs() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4444/api/jobs", {
+  .get("https://nexhire-z5c2.onrender.com/api/jobs", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

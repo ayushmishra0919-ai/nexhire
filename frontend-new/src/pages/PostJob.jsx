@@ -15,7 +15,7 @@ function PostJob() {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:4444/api/jobs",
+        "https://nexhire-z5c2.onrender.com/api/jobs",
         {
           title,
           salary: Number(salary),
