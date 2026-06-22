@@ -28,8 +28,8 @@ function Register() {
 
       alert("Registration Successful!");
     } catch (err) {
-  console.log(err.response?.data);
-  alert(JSON.stringify(err.response?.data));
+  console.log(err);
+  alert("Registration Failed");
 }
   };
 
