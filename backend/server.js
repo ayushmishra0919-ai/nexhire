@@ -8,8 +8,8 @@ const fs = require("fs");
 // MongoDB Atlas
 mongoose
   .connect(
-    "mongodb+srv://ayushmishra0919_db_user:<db_password>@cluster0.frgdf4r.mongodb.net/?appName=Cluster0"
-  )
+  "mongodb+srv://ayushmishra0919_db_user:n136Zls0LFYak0eG@cluster0.frgdf4r.mongodb.net/jobPortal?retryWrites=true&w=majority"
+)
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.log(err));
 
