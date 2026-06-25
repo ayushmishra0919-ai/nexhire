@@ -81,12 +81,23 @@ body {
 }
 
 .search {
-  width: 60%;
-  max-width: 600px;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
+  width: 70%;
+  max-width: 700px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
   font-size: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  outline: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.search:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+  border-color: #38bdf8;
 }
 
 .hero-btn {

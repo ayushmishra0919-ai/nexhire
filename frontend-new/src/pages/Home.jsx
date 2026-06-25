@@ -52,10 +52,11 @@ function Home() {
           Find Your Dream Job With India's Smartest Job Portal 🚀
         </h1>
 
-        <p>
-          Connect with top recruiters, discover high-paying jobs,
-          and build your career with confidence.
-        </p>
+       <p>
+  Discover verified opportunities from leading companies,
+  connect directly with recruiters, and accelerate your career
+  with India's next-generation hiring platform.
+</p>
 
         <input
           type="text"
