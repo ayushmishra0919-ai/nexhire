@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function Home() {
   const [search, setSearch] = useState("");
   const [selectedJob, setSelectedJob] = useState(null);
+  const navigate = useNavigate();
 
   const jobs = [
     {
@@ -66,9 +68,12 @@ function Home() {
         <br />
         <br />
 
-        <button className="hero-btn">
-          Explore Jobs
-        </button>
+        <button
+  className="hero-btn"
+  onClick={() => navigate("/jobs")}
+>
+  Explore Jobs
+</button>
 
         <p style={{ marginTop: "20px", color: "white" }}>
           {jobs.length}+ Active Jobs Available
