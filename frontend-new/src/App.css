@@ -102,39 +102,48 @@ body {
 
 .hero-btn {
   margin-top: 20px;
-  background: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
   color: white;
   border: none;
-  padding: 14px 30px;
-  border-radius: 10px;
+  padding: 16px 34px;
+  border-radius: 14px;
   cursor: pointer;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.45);
 }
+
+
 
 /* Job Cards */
 
 .jobs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 60px 8%;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px 8% 80px;
 }
 
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  border-color: #38bdf8;
 }
 
 .card h3 {
@@ -148,17 +157,21 @@ body {
 
 .card button {
   width: 100%;
-  margin-top: 15px;
-  background: #1e40af;
+  margin-top: 18px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 12px;
   cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
 .card button:hover {
-  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
 }
 
 /* Footer */

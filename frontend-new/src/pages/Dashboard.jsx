@@ -12,18 +12,54 @@ function Dashboard() {
     <div
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #2563eb, #7c3aed)",
+        background: "#f8fafc",
         padding: "40px",
-        color: "white",
       }}
     >
-      <h1 style={{ fontSize: "42px" }}>
-        🚀 NexHire Dashboard
-      </h1>
+      {/* Welcome Banner */}
+      <div
+        style={{
+          background: "linear-gradient(135deg, #2563eb, #3b82f6)",
+          color: "white",
+          padding: "35px",
+          borderRadius: "24px",
+          marginBottom: "30px",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "42px",
+            marginBottom: "10px",
+          }}
+        >
+          Welcome Back, Ayush 👋
+        </h1>
 
-      <p style={{ fontSize: "18px" }}>
-        Welcome back, Ayush! Manage jobs and applications easily.
-      </p>
+        <p
+          style={{
+            fontSize: "18px",
+            opacity: "0.9",
+            marginBottom: "20px",
+          }}
+        >
+          Manage jobs, applications and hiring activities from one place.
+        </p>
+
+        <button
+          onClick={() => navigate("/jobs")}
+          style={{
+            background: "white",
+            color: "#2563eb",
+            border: "none",
+            padding: "12px 20px",
+            borderRadius: "10px",
+            fontWeight: "600",
+            cursor: "pointer",
+          }}
+        >
+          Browse Jobs
+        </button>
+      </div>
 
       {/* Stats Cards */}
       <div
@@ -31,114 +67,190 @@ function Dashboard() {
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
           gap: "20px",
-          marginTop: "30px",
+          marginBottom: "40px",
         }}
       >
         <div
           style={{
-            background: "#ffffff",
-            color: "#111",
-            padding: "25px",
-            borderRadius: "15px",
-            textAlign: "center",
+            background: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+            border: "1px solid #e2e8f0",
           }}
         >
-          <h2>💼 12</h2>
-          <p>Total Jobs</p>
+          <p
+            style={{
+              color: "#64748b",
+              fontSize: "14px",
+              marginBottom: "10px",
+            }}
+          >
+            Total Jobs
+          </p>
+
+          <h2
+            style={{
+              fontSize: "36px",
+              color: "#2563eb",
+              margin: 0,
+            }}
+          >
+            12
+          </h2>
         </div>
 
         <div
           style={{
-            background: "#ffffff",
-            color: "#111",
-            padding: "25px",
-            borderRadius: "15px",
-            textAlign: "center",
+            background: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+            border: "1px solid #e2e8f0",
           }}
         >
-          <h2>👨‍💼 48</h2>
-          <p>Applicants</p>
+          <p
+            style={{
+              color: "#64748b",
+              fontSize: "14px",
+              marginBottom: "10px",
+            }}
+          >
+            Applicants
+          </p>
+
+          <h2
+            style={{
+              fontSize: "36px",
+              color: "#10b981",
+              margin: 0,
+            }}
+          >
+            48
+          </h2>
         </div>
 
         <div
           style={{
-            background: "#ffffff",
-            color: "#111",
-            padding: "25px",
-            borderRadius: "15px",
-            textAlign: "center",
+            background: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+            border: "1px solid #e2e8f0",
           }}
         >
-          <h2>📢 5</h2>
-          <p>Jobs Posted</p>
+          <p
+            style={{
+              color: "#64748b",
+              fontSize: "14px",
+              marginBottom: "10px",
+            }}
+          >
+            Jobs Posted
+          </p>
+
+          <h2
+            style={{
+              fontSize: "36px",
+              color: "#f59e0b",
+              margin: 0,
+            }}
+          >
+            5
+          </h2>
         </div>
 
         <div
           style={{
-            background: "#ffffff",
-            color: "#111",
-            padding: "25px",
-            borderRadius: "15px",
-            textAlign: "center",
+            background: "white",
+            padding: "30px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+            border: "1px solid #e2e8f0",
           }}
         >
-          <h2>⭐ 95%</h2>
-          <p>Profile Completion</p>
+          <p
+            style={{
+              color: "#64748b",
+              fontSize: "14px",
+              marginBottom: "10px",
+            }}
+          >
+            Profile Completion
+          </p>
+
+          <h2
+            style={{
+              fontSize: "36px",
+              color: "#8b5cf6",
+              margin: 0,
+            }}
+          >
+            95%
+          </h2>
         </div>
       </div>
 
-      {/* Action Cards */}
+      {/* Quick Actions */}
+      <h2
+        style={{
+          color: "#0f172a",
+          marginBottom: "20px",
+        }}
+      >
+        Quick Actions
+      </h2>
+
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+          gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
           gap: "20px",
-          marginTop: "40px",
         }}
       >
         <div
           onClick={() => navigate("/jobs")}
           style={{
             background: "white",
-            color: "#111",
             padding: "30px",
-            borderRadius: "15px",
+            borderRadius: "20px",
             cursor: "pointer",
-            textAlign: "center",
+            border: "1px solid #e2e8f0",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.06)",
           }}
         >
-          <h2>💼 Jobs</h2>
-          <p>Browse Available Jobs</p>
+          <h3>💼 Jobs</h3>
+          <p>Browse available opportunities.</p>
         </div>
 
         <div
           onClick={() => navigate("/profile")}
           style={{
             background: "white",
-            color: "#111",
             padding: "30px",
-            borderRadius: "15px",
+            borderRadius: "20px",
             cursor: "pointer",
-            textAlign: "center",
+            border: "1px solid #e2e8f0",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.06)",
           }}
         >
-          <h2>👤 Profile</h2>
-          <p>Manage Your Profile</p>
+          <h3>👤 Profile</h3>
+          <p>Manage your profile and resume.</p>
         </div>
 
         <div
           onClick={() => navigate("/post-job")}
           style={{
             background: "white",
-            color: "#111",
             padding: "30px",
-            borderRadius: "15px",
+            borderRadius: "20px",
             cursor: "pointer",
-            textAlign: "center",
+            border: "1px solid #e2e8f0",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.06)",
           }}
         >
-          <h2>📢 Post Job</h2>
-          <p>Create New Jobs</p>
+          <h3>📢 Post Job</h3>
+          <p>Create and manage job listings.</p>
         </div>
 
         <div
@@ -147,13 +259,13 @@ function Dashboard() {
             background: "#ef4444",
             color: "white",
             padding: "30px",
-            borderRadius: "15px",
+            borderRadius: "20px",
             cursor: "pointer",
-            textAlign: "center",
+            boxShadow: "0 10px 25px rgba(239,68,68,0.25)",
           }}
         >
-          <h2>🚪 Logout</h2>
-          <p>Sign Out</p>
+          <h3>🚪 Logout</h3>
+          <p>Sign out from your account.</p>
         </div>
       </div>
     </div>
