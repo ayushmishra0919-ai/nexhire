@@ -3,6 +3,7 @@ import axios from "axios";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     axios
@@ -27,15 +28,68 @@ function Jobs() {
         background: "#f4f7fc",
       }}
     >
-      <h1
-        style={{
-          textAlign: "center",
-          color: "#2563eb",
-          marginBottom: "30px",
-        }}
-      >
-        💼 Available Jobs
-      </h1>
+      <div
+  style={{
+    background: "linear-gradient(135deg, #2563eb, #3b82f6)",
+    color: "white",
+    padding: "35px",
+    borderRadius: "24px",
+    marginBottom: "30px",
+    textAlign: "center",
+  }}
+>
+  <h1
+    style={{
+      fontSize: "42px",
+      marginBottom: "10px",
+    }}
+  >
+    💼 Explore Opportunities
+  </h1>
+
+  <p
+    style={{
+      fontSize: "18px",
+      opacity: "0.9",
+    }}
+  >
+    Discover verified jobs from top companies and apply in one click.
+  </p>
+
+  <div
+    style={{
+      marginTop: "20px",
+      fontWeight: "600",
+    }}
+  >
+    {jobs.length} Active Jobs Available
+  </div>
+</div>
+
+<div
+  style={{
+    marginBottom: "30px",
+    display: "flex",
+    justifyContent: "center",
+  }}
+>
+  <input
+    type="text"
+    placeholder="🔍 Search jobs..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    style={{
+      width: "100%",
+      maxWidth: "600px",
+      padding: "16px 20px",
+      borderRadius: "14px",
+      border: "1px solid #d1d5db",
+      fontSize: "16px",
+      outline: "none",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.06)",
+    }}
+  />
+</div>
 
       <div
         style={{
@@ -44,7 +98,17 @@ function Jobs() {
           gap: "25px",
         }}
       >
-        {jobs.map((job) => (
+        {jobs
+  .filter(
+    (job) =>
+      job.title
+        ?.toLowerCase()
+        .includes(search.toLowerCase()) ||
+      job.jobType
+        ?.toLowerCase()
+        .includes(search.toLowerCase())
+  )
+  .map((job) => (
           <div
             key={job._id}
             style={{
@@ -53,18 +117,53 @@ function Jobs() {
               padding: "25px",
               boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
               transition: "0.3s",
+              border: "1px solid #e2e8f0",
             }}
           >
-            <h2 style={{ color: "#1e3a8a" }}>{job.title}</h2>
+            <h2
+  style={{
+    color: "#0f172a",
+    marginBottom: "15px",
+    fontSize: "24px",
+  }}
+>
+  {job.title}
+</h2>
 
-            <p>
-              <strong>💰 Salary:</strong> ₹
-              {job.salary?.toLocaleString()}
-            </p>
+            <div
+  style={{
+    display: "flex",
+    gap: "10px",
+    flexWrap: "wrap",
+    marginBottom: "15px",
+  }}
+>
+  <span
+    style={{
+      background: "#dbeafe",
+      color: "#2563eb",
+      padding: "6px 12px",
+      borderRadius: "999px",
+      fontWeight: "600",
+      fontSize: "14px",
+    }}
+  >
+    💰 ₹{job.salary?.toLocaleString()}
+  </span>
 
-            <p>
-              <strong>📌 Type:</strong> {job.jobType}
-            </p>
+  <span
+    style={{
+      background: "#dcfce7",
+      color: "#16a34a",
+      padding: "6px 12px",
+      borderRadius: "999px",
+      fontWeight: "600",
+      fontSize: "14px",
+    }}
+  >
+    📌 {job.jobType}
+  </span>
+</div>
 
             <p>
               <strong>👥 Openings:</strong> {job.maxPositions}
@@ -72,10 +171,10 @@ function Jobs() {
 
             <button
               onClick={() => alert(`Applied for ${job.title}`)}
-              style={{
+              style={{boxShadow: "0 10px 20px rgba(37,99,235,0.25)",
                 width: "100%",
                 padding: "12px",
-                background: "#2563eb",
+                background: "linear-gradient(135deg, #2563eb, #3b82f6)",
                 color: "white",
                 border: "none",
                 borderRadius: "10px",
